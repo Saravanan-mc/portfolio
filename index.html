@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saravanan M | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+    
+    <!-- Navigation -->
+  <header>
+    <nav class="nav-glass">
+        <a href="#" class="logo">
+            <i class="fas fa-laptop-code"></i>
+            <span>Saravanan M</span>
+        </a>
+
+        <div class="nav-actions">
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-address-card"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Mobile Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+</header>
+
+    
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>
+    
+    <!-- Mobile Menu Panel -->
+    <nav id="mobile-menu-panel" class="mobile-menu-panel">
+        <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close Mobile Menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+               <li><a href="#home"><i class="fas fa-house"></i> Home</a></li>
+                <li><a href="#about"><i class="fas fa-address-card"></i> About</a></li>
+                <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+                <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+        <button id="theme-toggle-mobile" class="theme-btn" style="align-self: center; margin-top: auto; margin-bottom: 24px;" aria-label="Toggle Theme">
+            <i class="fas fa-sun"></i>
+        </button>
+    </nav>
+    
+    <section id="home">
+        <div class="container hero-content" data-aos="fade-up" data-aos-duration="1200">
+            <h1>
+                <i class="fas fa-laptop-code"></i>
+                Building Digital<br>Experiences with Code
+            </h1>
+            <p class="hero-subtitle">
+                Hi, <strong style="font-size: 30px; background: linear-gradient(to right, rgb(255, 255, 255), rgb(0, 255, 153));-webkit-background-clip: text;color: transparent;">I'm Saravanan M</strong>. web developer, and
+            problem solver who builds fast, accessible,tech enthusiast and visually engaging
+            websites using modern JavaScript frameworks and thoughtful UI design.
+            I love turning ideas into interactive digital experiences.
+            </p>
+            <div class="hero-socials">
+                <a href="https://www.linkedin.com/in/saravanan1012/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Saravanan-mc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:saravananmcms@gmail.com" aria-label="Email">
+                    <i class="fas fa-envelope-open-text"></i>
+                </a>
+                
+            </div>
+            <div class="cta-group">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-briefcase"></i>
+                    View Work
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID" class="btn btn-glass" target="_blank" rel="noopener noreferrer">
+                    <i class="fas fa-file-download"></i>
+                    Resume
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-comments"></i>
+                    Contact Me
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2><i class="fas fa-address-card"></i> About Me</h2>
+                <p>A glimpse into who I am and what I do.</p>
+            </div>
+            <div class="bento-grid">
+                <div class="glass-card bento-item tall photo" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/saravanan.png" alt="Saravanan M - Profile Photo">
+                </div>
+                <div class="glass-card bento-item large" data-aos="fade-up" data-aos-delay="150">
+                    <div class="bento-icon"><i class="fas fa-user"></i></div>
+                    <h3>Who am I?</h3>
+                    <p>
+                       I am a final-year Electronics and Communication Engineering (ECE) student specializing in web technologies. I enjoy solving complex problems and transforming ideas into clean, user-friendly digital experiences.
+                    </p>
+                </div>
+                <div class="glass-card bento-item" data-aos="fade-up" data-aos-delay="250">
+                    <div class="bento-icon"><i class="fas fa-terminal"></i></div>
+                    <h3>Clean Code</h3>
+                    <p>I focus on writing readable, maintainable, and scalable code.</p>
+                </div>
+                <div class="glass-card bento-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bento-icon"><i class="fas fa-paint-brush"></i></div>
+                    <h3>Design</h3>
+                    <p>Strong interest in modern UI/UX principles and visual consistency.</p>
+                </div>
+                <div class="glass-card bento-item large" data-aos="fade-up" data-aos-delay="350">
+                    <div class="bento-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>My Goal</h3>
+                    <p>
+                        To work with a forward-thinking team where I can grow as a developer, contribute real-world solutions, and
+                        continuously improve my skills, believing that meaningful growth is built day by day.
+                    </p>
+                </div>
+                <div class="glass-card bento-item photo" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/laptop.jpg" alt="Saravanan M - Secondary Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2><i class="fas fa-laptop-code"></i> My Skills</h2>
+                <p>Technologies I've worked with and mastered over the years.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card java-card" data-aos="zoom-in-up" data-aos-delay="0">
+                    <div class="skill-icon"><i class="fab fa-java java-icon"></i></div>
+                    <h3>Java</h3>
+                    <p>OOP, Multithreading</p>
+                    <div class="progress-track">
+                        <div class="progress-fill java" style="--progress-width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card mysql-card" data-aos="zoom-in-up" data-aos-delay="300">
+                    <div class="skill-icon"><i class="fas fa-database mysql-icon"></i></div>
+                    <h3>MySQL</h3>
+                    <p>Queries, Joins, Database Design</p>
+                    <div class="progress-track">
+                        <div class="progress-fill mysql" style="--progress-width: 85%">85%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card c-card" data-aos="zoom-in-up" data-aos-delay="50">
+                    <div class="skill-icon"><i class="fas fa-code c-icon"></i></div>
+                    <h3>C</h3>
+                    <p>Pointers, Data Structures</p>
+                    <div class="progress-track">
+                        <div class="progress-fill c" style="--progress-width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card html-card" data-aos="zoom-in-up" data-aos-delay="100">
+                    <div class="skill-icon"><i class="fab fa-html5 html-icon"></i></div>
+                    <h3>HTML5</h3>
+                    <p>Semantic markup, accessibility</p>
+                    <div class="progress-track">
+                        <div class="progress-fill html" style="--progress-width: 90%">95%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card css-card" data-aos="zoom-in-up" data-aos-delay="150">
+                    <div class="skill-icon"><i class="fab fa-css3-alt css-icon"></i></div>
+                    <h3>CSS3</h3>
+                    <p>Flexbox, Grid, Animations</p>
+                    <div class="progress-track">
+                        <div class="progress-fill css" style="--progress-width: 86%">86%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card js-card" data-aos="zoom-in-up" data-aos-delay="200">
+                    <div class="skill-icon"><i class="fab fa-js js-icon"></i></div>
+                    <h3>JavaScript</h3>
+                    <p>ES6+, Async, DOM</p>
+                    <div class="progress-track">
+                        <div class="progress-fill js" style="--progress-width: 70%">70%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card react-card" data-aos="zoom-in-up" data-aos-delay="250">
+                    <div class="skill-icon"><i class="fab fa-react react-icon"></i></div>
+                    <h3>React</h3>
+                    <p>Hooks, Context, Router</p>
+                    <div class="progress-track">
+                        <div class="progress-fill react" style="--progress-width: 55%">55%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card git-card" data-aos="zoom-in-up" data-aos-delay="350">
+                    <div class="skill-icon"><i class="fab fa-git-alt git-icon"></i></div>
+                    <h3>Git / GitHub</h3>
+                    <p>Version Control, Branching</p>
+                    <div class="progress-track">
+                        <div class="progress-fill git" style="--progress-width: 80%">80%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card php-card" data-aos="zoom-in-up" data-aos-delay="400">
+                    <div class="skill-icon"><i class="fab fa-php php-icon"></i></div>
+                    <h3>PHP</h3>
+                    <p>Backend Development, Laravel</p>
+                    <div class="progress-track">
+                        <div class="progress-fill php" style="--progress-width: 75%">70%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card embedded-c-card" data-aos="zoom-in-up" data-aos-delay="450">
+                    <div class="skill-icon"><i class="fas fa-microchip embedded-c-icon"></i></div>
+                    <h3>Embedded C</h3>
+                    <p>Microcontrollers, Firmware</p>
+                    <div class="progress-track">
+                        <div class="progress-fill embedded-c" style="--progress-width: 75%">75%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card prompt-eng-card" data-aos="zoom-in-up" data-aos-delay="500">
+                    <div class="skill-icon"><i class="fas fa-brain prompt-eng-icon"></i></div>
+                    <h3>Prompt Engineering</h3>
+                    <p>AI Prompts, LLM Optimization</p>
+                    <div class="progress-track">
+                        <div class="progress-fill prompt-eng" style="--progress-width: 75%">75%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card uiux-card" data-aos="zoom-in-up" data-aos-delay="550">
+                    <div class="skill-icon"><i class="fas fa-palette uiux-icon"></i></div>
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Prototyping</p>
+                    <div class="progress-track">
+                        <div class="progress-fill uiux" style="--progress-width: 85%">85%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card python-card" data-aos="zoom-in-up" data-aos-delay="600">
+                    <div class="skill-icon"><i class="fab fa-python python-icon"></i></div>
+                    <h3>Python</h3>
+                    <p>Scripting, Data Analysis</p>
+                    <div class="progress-track">
+                        <div class="progress-fill python" style="--progress-width: 60%">60%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card office-card" data-aos="zoom-in-up" data-aos-delay="650">
+                    <div class="skill-icon"><i class="fas fa-file-alt office-icon"></i></div>
+                    <h3>MS Office</h3>
+                    <p>Word, Excel, PowerPoint</p>
+                    <div class="progress-track">
+                        <div class="progress-fill office" style="--progress-width: 85%">85%</div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card jdbc-card" data-aos="zoom-in-up" data-aos-delay="700">
+                    <div class="skill-icon"><i class="fas fa-database jdbc-icon"></i></div>
+                    <h3>JDBC</h3>
+                    <p>Database Connectivity, SQL Integration</p>
+                    <div class="progress-track">
+                        <div class="progress-fill jdbc" style="--progress-width: 50%">50%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="education">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2><i class="fas fa-graduation-cap"></i> Education & Training</h2>
+                <p>My academic journey and key qualifications that shaped my technical foundation.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item glass-card" data-aos="fade-right" data-aos-delay="300">
+                    <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2022 - 2026</span>
+                    <div class="timeline-dot"></div>
+                    <h3><i class="fas fa-building"></i> B.E. Electronics and Communication Engineering</h3>
+                    <p>Bannari Amman Institute of Technology, Anna University</p>
+                    <p><i class="fas fa-chart-line"></i> CGPA: 7.87 (up to 6th semester)</p>
+                </div>
+                <div class="timeline-item glass-card" data-aos="fade-right" data-aos-delay="400">
+                    <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2022</span>
+                    <div class="timeline-dot"></div>
+                    <h3><i class="fas fa-book"></i> Higher Secondary Certificate (HSC)</h3>
+                    <p>Government Higher Secondary School, Balasamudram</p>
+                    <p><i class="fas fa-chart-line"></i> Percentage: 87%</p>
+                </div>
+                <div class="timeline-item glass-card" data-aos="fade-right" data-aos-delay="500">
+                    <span class="timeline-date"><i class="fas fa-calendar-alt"></i> 2020</span>
+                    <div class="timeline-dot"></div>
+                    <h3><i class="fas fa-book-open"></i> Secondary School Leaving Certificate (SSLC)</h3>
+                    <p>Government Higher Secondary School, Balasamudram</p>
+                    <p><i class="fas fa-chart-line"></i> Percentage: 81.8%</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<section id="projects">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <h2><i class="fas fa-folder-open"></i> My Featured Projects</h2>
+            <p>Filter by category to explore my work in detail.</p>
+        </div>
+        <div class="project-filter" id="project-filter-buttons" data-aos="fade-up" data-aos-delay="100"></div>
+        
+        <!-- Swiper Container Only -->
+        <div class="swiper-container" data-aos="fade-up" data-aos-delay="200">
+            <div class="swiper-wrapper" id="projects-wrapper"></div>
+            <div class="swiper-pagination"></div>
+            <!-- Removed default navigation buttons from here -->
+        </div>
+        
+        <!-- Bottom navigation controls - OUTSIDE swiper-container -->
+        <div class="swiper-navigation-bottom" data-aos="fade-up" data-aos-delay="300">
+            <div class="swiper-button-prev-bottom">
+                <i class="fas fa-chevron-left"></i>
+                <span>Prev</span>
+            </div>
+            <div class="swiper-pagination-bottom"></div>
+            <div class="swiper-button-next-bottom">
+                <span>Next</span>
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+    </div>
+</section>
+    
+    <section id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+                <p>I'm always excited to collaborate or discuss new opportunities. Feel free to reach out!</p>
+            </div>
+            <div class="glass-card contact-wrapper" data-aos="zoom-in" data-aos-delay="300">
+                <div class="contact-left" data-aos="fade-right" data-aos-delay="400">
+                    <h3><i class="fas fa-handshake"></i> Let's Build Something Amazing!</h3>
+                    <p>I'm available for freelance projects and open to full-time opportunities. If you have an idea or
+                    want to connect, let's chat!</p>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/saravanan1012/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Saravanan-mc" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                             <a href="mailto:saravananmcms@gmail.com" aria-label="Email">
+    <i class="fas fa-envelope"></i> <!-- Font Awesome -->
+</a>
+                        <a href="https://leetcode.com/u/saravanan_m10/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode">
+                            <i class="fas fa-terminal"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-right" data-aos="fade-left" data-aos-delay="500">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <div>
+                            <p>Email</p>
+                            <a href="mailto:saravananmcms@gmail.com">saravananmcms@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <p>Phone</p>
+                            <a href="tel:+916369275933">+91 63692 75933</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-pin"></i>
+                        </div>
+                        <div>
+                            <p>Location</p>
+                            <span>Tiruchirappalli, Tamil Nadu, India</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/saravanan1012/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/Saravanan-mc" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:saravananmcms@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope-open-text"></i></a>
+                <a href="https://leetcode.com/u/saravanan_m10/" class="social-icon" target="_blank" rel="noopener noreferrer" aria-label="LeetCode"><i class="fas fa-terminal"></i></a>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                <i class="fas fa-laptop-code"></i> &copy; 2025 Saravanan M.
+            </p>
+        </div>
+    </footer>
+    
+    <script src="script.js"> </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>
