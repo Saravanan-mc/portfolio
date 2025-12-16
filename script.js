@@ -119,6 +119,7 @@ function renderProjects(projectsArray) {
                         </div>
                         <div class="project-bottom">
                             <div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join("")}</div>
+                            <p><strong>Links</strong>
                             <div class="project-links">
                                 ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>` : ''}
                                 ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>` : ''}
@@ -408,6 +409,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
 
 
 
