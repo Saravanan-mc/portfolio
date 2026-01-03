@@ -1,8 +1,8 @@
 // Projects Data
 const allProjects = [
     {
-        title: "Student Ecosystem for Career Growth",
-        description: "An AI-powered student platform designed to support academics, career development, mentorship, and emotional wellness through smart dashboards and community engagement.",
+        title: "Unified Student Webpage",
+        description: "An student platform designed to support academics, career development, mentorship, and emotional wellness through smart dashboards and community engagement.",
         category: "Full-stack",
         tags: ["HTML", "CSS", "JavaScript", "PHP", "AI", "EdTech"],
         imageUrl: "assets/1.png",
@@ -82,7 +82,7 @@ const allProjects = [
         description: "A modern car marketplace and dealership platform UI showcasing vehicles with a clean and user-friendly design.",
         category: "Design",
         tags: ["Figma", "UI/UX", "Marketplace"],
-        imageUrl: "assets/7.png",
+        imageUrl: "assets/8.png",
         demoUrl: "",
         githubUrl: "",
         youtubeUrl: "",
@@ -93,7 +93,7 @@ const allProjects = [
         description: "An elegant restaurant mobile app UI focused on menu exploration and table booking with a premium visual experience.",
         category: "Design",
         tags: ["Figma", "Restaurant App", "Mobile UI"],
-        imageUrl: "assets/8.png",
+        imageUrl: "assets/7.png",
         demoUrl: "",
         githubUrl: "",
         youtubeUrl: "",
@@ -104,7 +104,7 @@ const allProjects = [
 // Render Projects Function
 function renderProjects(projectsArray) {
     const wrapper = document.getElementById("projects-wrapper");
-   wrapper.innerHTML = projectsArray.length === 0 ?
+    wrapper.innerHTML = projectsArray.length === 0 ?
         `<div class="swiper-slide"><div class="glass-card project-card"><div class="project-content"><p>No projects found in this category.</p></div></div></div>` :
         projectsArray.map(project => `
             <div class="swiper-slide">
@@ -139,40 +139,40 @@ function initializeSwiper() {
     if (swiperInstance) {
         swiperInstance.destroy(true, true);
     }
-    
+
     const slides = document.querySelectorAll("#projects-wrapper .swiper-slide");
     if (slides.length === 0) return;
-    
+
     swiperInstance = new Swiper(".swiper-container", {
         loop: true,
         grabCursor: true,
-        speed: 800,
-        autoplay: { 
-            delay: 3000,
+        speed: 2000,
+        autoplay: {
+            delay: 1000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
         },
-        pagination: { 
-            el: ".swiper-pagination", 
+        pagination: {
+            el: ".swiper-pagination",
             clickable: true,
             type: 'bullets'  // Ensure bullets type
         },
         slidesPerView: 1.1,
         spaceBetween: 16,
         breakpoints: {
-            480: { 
+            480: {
                 slidesPerView: 1.2,
                 spaceBetween: 16
             },
-            640: { 
+            640: {
                 slidesPerView: 1.5,
                 spaceBetween: 20
             },
-            768: { 
+            768: {
                 slidesPerView: 2.2,
                 spaceBetween: 24
             },
-            1024: { 
+            1024: {
                 slidesPerView: 3.2,
                 spaceBetween: 24
             }
@@ -184,19 +184,19 @@ function initializeSwiper() {
         },
         // Update bottom pagination text
         on: {
-            init: function() {
+            init: function () {
                 updateBottomPagination(this);
             },
-            slideChange: function() {
+            slideChange: function () {
                 updateBottomPagination(this);
             },
             // Also update after loop creation
-            afterInit: function() {
+            afterInit: function () {
                 updateBottomPagination(this);
             }
         }
     });
-    
+
     // Function to update bottom pagination text
     function updateBottomPagination(swiper) {
         const paginationBottom = document.querySelector('.swiper-pagination-bottom');
@@ -204,7 +204,7 @@ function initializeSwiper() {
             // Get the real number of unique slides
             let totalSlides = 0;
             let uniqueSlides = 0;
-            
+
             // Count only unique slides (excluding duplicates in loop mode)
             swiper.slides.forEach((slide, index) => {
                 const isClone = slide.classList.contains('swiper-slide-duplicate');
@@ -213,15 +213,15 @@ function initializeSwiper() {
                 }
                 totalSlides++;
             });
-            
+
             // In loop mode, subtract the duplicate slides
             const realTotal = swiper.params.loop ? uniqueSlides : totalSlides;
-            
+
             // Get current real index (1-based)
-            const current = swiper.params.loop ? 
-                swiper.realIndex + 1 : 
+            const current = swiper.params.loop ?
+                swiper.realIndex + 1 :
                 swiper.activeIndex + 1;
-            
+
             paginationBottom.textContent = `${current} / ${realTotal}`;
         }
     }
@@ -231,7 +231,7 @@ function handleFilter(category) {
     document.querySelectorAll(".filter-btn").forEach(btn => {
         btn.classList.toggle("active", btn.dataset.category === category);
     });
-    
+
     const filtered = category === "All" ? allProjects : allProjects.filter(p => p.category === category);
     renderProjects(filtered);
     initializeSwiper();
@@ -243,7 +243,7 @@ function toggleTheme() {
     const newTheme = current === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
-    
+
     // Update icons
     document.querySelectorAll(".theme-btn i").forEach(icon => {
         icon.className = newTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
@@ -263,25 +263,25 @@ function closeMobileMenu() {
     document.body.style.overflow = "";
 }
 
-  const text = `Hi, I'm Saravanan M — a tech enthusiast, web developer, and problem solver who builds fast, accessible, and visually engaging websites using modern JavaScript frameworks and thoughtful UI design. I love turning ideas into interactive digital experiences.`;
+const text = `Hi, I'm Saravanan M — a tech enthusiast, web developer, and problem solver who builds fast, accessible, and visually engaging websites using modern JavaScript frameworks and thoughtful UI design. I love turning ideas into interactive digital experiences.`;
 
-    const speed = 35; // typing speed in ms
-    let index = 0;
+const speed = 35; // typing speed in ms
+let index = 0;
 
-    function typeText() {
-        if (index < text.length) {
-            document.getElementById("typed-text").innerHTML += text.charAt(index);
-            index++;
-            setTimeout(typeText, speed);
-        }
+function typeText() {
+    if (index < text.length) {
+        document.getElementById("typed-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeText, speed);
     }
+}
 
-    window.addEventListener("load", typeText);
-    
+window.addEventListener("load", typeText);
+
 // Scroll Animation Observer
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.skill-card, .bento-item, .timeline-item');
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -293,7 +293,7 @@ function initScrollAnimations() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     });
-    
+
     animatedElements.forEach(el => {
         el.classList.add('animate-on-scroll');
         observer.observe(el);
@@ -303,11 +303,11 @@ function initScrollAnimations() {
 // Animate progress bars on scroll
 function animateProgressBars() {
     const progressBars = document.querySelectorAll('.progress-fill');
-    
+
     progressBars.forEach(bar => {
         const rect = bar.getBoundingClientRect();
         const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
-        
+
         if (isVisible && !bar.classList.contains('animate')) {
             bar.classList.add('animate');
         }
@@ -317,18 +317,18 @@ function animateProgressBars() {
 // DOM Ready
 document.addEventListener("DOMContentLoaded", () => {
     // Load Theme
-    const savedTheme = localStorage.getItem("theme") || 
+    const savedTheme = localStorage.getItem("theme") ||
         (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
     document.documentElement.setAttribute("data-theme", savedTheme);
-    
+
     document.querySelectorAll(".theme-btn i").forEach(icon => {
         icon.className = savedTheme === "dark" ? "fas fa-sun" : "fas fa-moon";
     });
-    
+
     // Projects Setup
     const filterContainer = document.getElementById("project-filter-buttons");
     const categories = ["All", ...new Set(allProjects.map(p => p.category))];
-    
+
     categories.forEach(cat => {
         const btn = document.createElement("button");
         btn.className = "filter-btn";
@@ -337,71 +337,71 @@ document.addEventListener("DOMContentLoaded", () => {
         btn.addEventListener("click", () => handleFilter(cat));
         filterContainer.appendChild(btn);
     });
-    
+
     handleFilter("All");
-    
+
     // Theme Toggles
     document.querySelectorAll(".theme-btn").forEach(btn => {
         btn.addEventListener("click", toggleTheme);
     });
-    
+
     // Mobile Menu
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
     const mobileMenuClose = document.getElementById("mobile-menu-close");
     const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
-    
+
     if (mobileMenuBtn) mobileMenuBtn.addEventListener("click", openMobileMenu);
     if (mobileMenuClose) mobileMenuClose.addEventListener("click", closeMobileMenu);
     if (mobileMenuOverlay) mobileMenuOverlay.addEventListener("click", closeMobileMenu);
-    
+
     document.querySelectorAll(".mobile-nav-links a").forEach(link => {
         link.addEventListener("click", closeMobileMenu);
     });
-    
+
     // Initialize Scroll Animations
     initScrollAnimations();
-    
+
     // AOS Init
     if (typeof AOS !== "undefined") {
-        AOS.init({ 
-            offset: 100, 
-            duration: 1000, 
-            easing: "ease-out-cubic", 
-            once: true 
+        AOS.init({
+            offset: 100,
+            duration: 1000,
+            easing: "ease-out-cubic",
+            once: true
         });
     }
-    
+
     // Smooth Scrolling for Nav Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener("click", function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute("href"));
             if (target) {
-                target.scrollIntoView({ 
-                    behavior: "smooth", 
-                    block: "start" 
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
                 });
             }
         });
     });
-    
+
     // Progress bars animation on scroll
     window.addEventListener('scroll', animateProgressBars);
     animateProgressBars(); // Initial check
-    
+
     // Add touch feedback for mobile
     if ('ontouchstart' in window) {
         const touchElements = document.querySelectorAll(
             '.btn, .skill-card, .project-card, .contact-item, ' +
             '.hero-socials a, .contact-socials a, .social-icon'
         );
-        
+
         touchElements.forEach(element => {
-            element.addEventListener('touchstart', function() {
+            element.addEventListener('touchstart', function () {
                 this.style.transform = 'scale(0.95)';
             });
-            
-            element.addEventListener('touchend', function() {
+
+            element.addEventListener('touchend', function () {
                 setTimeout(() => {
                     this.style.transform = '';
                 }, 100);
@@ -413,4 +413,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+// ======= FORCE DARK MODE =======
+document.documentElement.setAttribute("data-theme", "dark");
+
+// ======= REMOVE THEME TOGGLE FUNCTIONALITY =======
+document.querySelectorAll(".theme-btn").forEach(btn => {
+    // Remove any event listeners
+    btn.replaceWith(btn.cloneNode(true));
+    // Hide the button just in case
+    btn.style.display = "none";
+});
+
+// ======= IGNORE LOCALSTORAGE OR SYSTEM PREFERENCES =======
+// No code to read 'theme' or system preference needed
+
+// Optional: update icons if you have any theme icons
+document.querySelectorAll(".theme-btn i").forEach(icon => {
+    icon.className = "fas fa-sun"; // indicates dark mode is active
+});
 
